@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "SPORT+"
+description = "Rede social esportiva para atletas, praticantes e professores de Educação Física compartilharem vídeos, avaliarem performances, encontrarem parceiros e criarem desafios."
+version = "1.0.0"
+id = "artifacts/sport-plus"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19713
+
+[services.development]
+run = "pnpm --filter @workspace/sport-plus run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/sport-plus", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/sport-plus/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19713"
+BASE_PATH = "/"
