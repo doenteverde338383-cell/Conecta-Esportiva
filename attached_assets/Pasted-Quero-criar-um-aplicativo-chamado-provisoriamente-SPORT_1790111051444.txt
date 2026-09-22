@@ -1,0 +1,636 @@
+Quero criar um aplicativo chamado provisoriamente SPORT+. É uma rede social voltada exclusivamente para pessoas que praticam esportes, atletas e professores de Educação Física.
+
+O objetivo principal é criar uma comunidade esportiva onde as pessoas possam publicar vídeos praticando esportes, descobrir outros atletas, avaliar vídeos com estrelas, participar de um ranking e encontrar pessoas para jogar, desafiar ou organizar partidas e campeonatos.
+
+Não quero que o aplicativo seja simplesmente uma cópia de TikTok ou Instagram. O principal diferencial deve ser a conexão entre pessoas através do esporte.
+
+1. TIPOS DE USUÁRIO
+
+No cadastro, o usuário deve escolher entre:
+
+ATLETA / PRATICANTE
+
+Pessoa que pratica algum esporte, seja profissional, amadora ou iniciante.
+
+Pode:
+
+- Criar perfil
+- Escolher seus esportes
+- Publicar vídeos
+- Assistir vídeos
+- Pesquisar vídeos
+- Pesquisar usuários
+- Receber estrelas
+- Dar estrelas para vídeos
+- Aparecer no ranking
+- Criar desafios
+- Aceitar desafios
+- Participar de jogos amistosos
+- Criar ou participar de campeonatos
+- Encontrar outros praticantes
+
+PROFESSOR DE EDUCAÇÃO FÍSICA
+
+Usuário que é professor/formado em Educação Física.
+
+Pode:
+
+- Ter perfil profissional
+- Publicar vídeos
+- Receber estrelas
+- Dar estrelas
+- Aparecer no ranking, se aplicável
+- Encontrar seus alunos dentro da plataforma
+- Acompanhar os perfis dos alunos
+- Convidar pessoas para sua escolinha/equipe futuramente
+- Criar desafios, jogos e campeonatos
+
+O sistema deve diferenciar visualmente os dois tipos de conta.
+
+---
+
+2. TELA INICIAL / FEED
+
+Criar uma tela inicial moderna semelhante a uma rede social, mas totalmente voltada para esportes.
+
+No feed devem aparecer vídeos publicados pelos usuários.
+
+Cada publicação deve mostrar:
+
+- Vídeo
+- Foto/nome do usuário
+- Esporte relacionado
+- Quantidade de estrelas
+- Curtidas
+- Comentários
+- Botão para dar estrelas
+- Botão para comentar
+- Botão para interagir com o usuário
+- Botão para desafiar
+
+Exemplos de esportes:
+
+- Futebol
+- Futsal
+- Vôlei
+- Handebol
+- Basquete
+- Tênis
+- Atletismo
+- Corrida
+- Natação
+- Outros
+
+Não limitar o aplicativo ao vôlei.
+
+---
+
+3. PUBLICAR VÍDEO
+
+Criar uma tela específica para publicar vídeos.
+
+O usuário deve poder:
+
+- Selecionar/gravar um vídeo
+- Adicionar descrição
+- Escolher o esporte
+- Adicionar tags
+- Publicar
+
+Exemplo:
+
+"Treino de ataque no vôlei"
+
+Esporte: Vôlei
+
+O vídeo deve ser armazenado no backend/cloud do aplicativo, não simplesmente incorporado de uma plataforma externa como YouTube.
+
+No MVP, priorizar vídeos curtos para reduzir o consumo de armazenamento.
+
+---
+
+4. SISTEMA DE ESTRELAS
+
+Criar um sistema de avaliação por estrelas.
+
+O usuário poderá avaliar um vídeo com estrelas.
+
+Exemplo:
+
+⭐ ⭐ ⭐ ⭐ ⭐
+
+As estrelas recebidas devem ficar associadas ao usuário que publicou o vídeo.
+
+Criar no perfil:
+
+"Estrelas recebidas: 245"
+
+As estrelas acumuladas devem contribuir para o ranking.
+
+Importante:
+
+- Evitar que o próprio usuário dê estrelas para si mesmo.
+- Evitar múltiplas avaliações abusivas da mesma pessoa no mesmo conteúdo.
+- Criar regras básicas contra spam e abuso.
+
+---
+
+5. RANKING
+
+Criar uma área chamada Ranking.
+
+O ranking deve mostrar os usuários com maior quantidade de estrelas.
+
+Exemplo:
+
+🏆 RANKING
+
+1. José — 950 ⭐
+2. Fabrício — 820 ⭐
+3. Maria — 760 ⭐
+
+Criar filtros por:
+
+- Geral
+- Esporte
+- Região, se posteriormente houver localização
+
+O ranking deve ser atualizado automaticamente conforme os usuários recebem estrelas.
+
+Não criar um sistema complexo de competição inicialmente.
+
+---
+
+6. PERFIL DO USUÁRIO
+
+Criar um perfil esportivo.
+
+Mostrar:
+
+- Foto
+- Nome
+- Nome de usuário
+- Tipo de conta
+- Esportes praticados
+- Cidade/região opcional
+- Quantidade de estrelas
+- Posição no ranking
+- Vídeos publicados
+- Desafios
+- Informações básicas
+
+Exemplo:
+
+FABRÍCIO
+Atleta / Praticante
+
+🏐 Vôlei
+⚽ Futsal
+🤾 Handebol
+
+⭐ 820 estrelas
+
+[Desafiar]
+
+[Ver vídeos]
+
+O perfil deve ter uma aparência moderna e esportiva.
+
+---
+
+7. PESQUISA
+
+Criar uma tela de pesquisa.
+
+O usuário poderá pesquisar:
+
+Vídeos
+
+Exemplo:
+"ataque vôlei"
+
+Resultados relacionados aos vídeos.
+
+Usuários
+
+Exemplo:
+"José"
+
+Mostrar perfis de atletas e professores.
+
+Também permitir filtrar por esporte.
+
+---
+
+8. DESAFIOS
+
+Essa é uma das principais partes do aplicativo.
+
+Não quero que o sistema fique limitado a amizade ou seguidores.
+
+O usuário deve poder chamar outra pessoa para uma atividade esportiva.
+
+Criar botão:
+
+DESAFIAR
+
+Tipos de desafio:
+
+- X1
+- Amistoso
+- Jogo
+- Campeonato
+
+Exemplo:
+
+Fabrício
+🏐 Vôlei
+
+[Desafiar José]
+
+Escolher:
+
+Tipo: X1
+Esporte: Vôlei
+Data:
+Horário:
+Local:
+Mensagem:
+
+[Enviar desafio]
+
+O outro usuário poderá:
+
+- Aceitar
+- Recusar
+- Ver detalhes
+
+---
+
+9. CRIAR CAMPEONATO
+
+Criar uma função simples para organizar campeonatos.
+
+O usuário poderá escolher:
+
+- Nome do campeonato
+- Esporte
+- Data
+- Local
+- Número de participantes/equipes
+- Descrição
+
+Depois poderá convidar outros usuários.
+
+No MVP, não precisa criar um sistema extremamente complexo de tabela automática.
+
+O objetivo inicial é apenas permitir que usuários criem e encontrem eventos esportivos.
+
+---
+
+10. PROFESSORES E ALUNOS
+
+Criar uma área exclusiva para contas de professor.
+
+Nome da área:
+
+Meus alunos
+
+O professor poderá visualizar os alunos vinculados ao seu perfil.
+
+Cada aluno deve aparecer com:
+
+- Nome
+- Foto
+- Esporte
+- Perfil
+- Vídeos
+- Estrelas
+
+Criar possibilidade de um professor enviar convite para um aluno.
+
+Exemplo:
+
+Professor:
+"Encontrar alunos"
+
+Pesquisar usuário → enviar convite → aluno aceita → aparece em "Meus alunos".
+
+Essa função deve ajudar professores de Educação Física a encontrar e acompanhar seus alunos dentro da plataforma.
+
+---
+
+11. NAVEGAÇÃO
+
+Criar uma barra de navegação inferior simples:
+
+🏠 Início
+🔍 Pesquisar
+➕ Publicar
+🏆 Ranking
+👤 Perfil
+
+A área de desafios pode ficar dentro do perfil/início ou receber acesso próprio caso isso deixe a experiência melhor.
+
+---
+
+12. TELA DE INÍCIO
+
+Na parte superior:
+
+Logo SPORT+
+
+🔍 Pesquisa
+
+Depois:
+
+Feed de vídeos.
+
+Criar uma área destacada:
+
+Desafios
+
+"Encontre alguém para jogar."
+
+[Explorar desafios]
+
+---
+
+13. DESIGN
+
+Quero um design moderno, esportivo e tecnológico.
+
+Estilo visual:
+
+- Fundo predominantemente escuro/preto
+- Detalhes em verde neon
+- Branco para textos principais
+- Cinza para textos secundários
+- Cards modernos
+- Cantos arredondados
+- Ícones simples
+- Interface limpa
+- Aparência de aplicativo esportivo profissional
+
+O aplicativo deve parecer uma mistura de:
+
+- rede social
+- comunidade esportiva
+- plataforma de atletas
+
+Mas sem copiar visualmente Instagram, TikTok ou qualquer outra rede social.
+
+Criar uma identidade própria.
+
+---
+
+14. PRIMEIRA EXPERIÊNCIA DO USUÁRIO
+
+Ao abrir o aplicativo:
+
+Tela 1:
+SPORT+
+
+"Conecte-se através do esporte."
+
+[Começar]
+
+Tela 2:
+
+"Como você usa o SPORT+?"
+
+[Sou atleta / praticante]
+
+[Sou professor de Educação Física]
+
+Depois:
+
+Cadastro:
+
+- Nome
+- Nome de usuário
+- E-mail
+- Senha
+- Foto
+- Cidade/região opcional
+- Esportes praticados
+
+Depois entrar no feed.
+
+---
+
+15. AUTENTICAÇÃO
+
+Criar:
+
+- Cadastro
+- Login
+- Logout
+- Recuperação de senha
+- Controle de acesso
+
+Usar autenticação segura.
+
+Cada usuário deve possuir seu próprio perfil e seus próprios dados.
+
+---
+
+16. BANCO DE DADOS
+
+Estruturar o banco de dados de maneira organizada.
+
+Criar entidades/tabelas para:
+
+- Usuários
+- Perfis
+- Esportes
+- Vídeos
+- Estrelas
+- Curtidas
+- Comentários
+- Desafios
+- Participantes de desafios
+- Campeonatos
+- Participantes de campeonatos
+- Relação professor/aluno
+
+Usar Supabase para autenticação, banco de dados e armazenamento de arquivos quando apropriado.
+
+Criar regras de segurança para que um usuário não consiga acessar ou alterar dados privados de outro usuário.
+
+---
+
+17. VÍDEOS E ARMAZENAMENTO
+
+Os vídeos são uma parte importante do aplicativo.
+
+Quero que os vídeos sejam armazenados na infraestrutura de armazenamento do aplicativo/backend, e não dependam do YouTube.
+
+Porém, o MVP deve ser econômico.
+
+Começar com:
+
+- vídeos curtos
+- limite de tamanho por vídeo
+- compressão/otimização quando possível
+- armazenamento organizado por usuário
+- possibilidade futura de aumentar a capacidade
+
+A arquitetura deve permitir crescimento futuro sem precisar reconstruir todo o aplicativo.
+
+---
+
+18. O QUE NÃO COLOCAR NO MVP
+
+Não quero deixar o primeiro projeto exageradamente complexo.
+
+NÃO adicionar inicialmente:
+
+- Aulas de vôlei
+- Cursos
+- Sistema complexo de treinamento
+- Marketplace
+- Pagamentos
+- Assinaturas
+- Publicidade
+- Chat extremamente complexo
+- Sistema de seguidores obrigatório
+- Sistema complexo de amizade
+- Gamificação exagerada
+
+Esses recursos podem ser adicionados futuramente.
+
+O foco inicial é validar a ideia.
+
+---
+
+19. OBJETIVO DO MVP
+
+O MVP precisa provar quatro coisas:
+
+1. As pessoas querem publicar seus vídeos esportivos.
+2. As pessoas querem descobrir outros praticantes.
+3. As pessoas gostam do sistema de estrelas/ranking.
+4. As pessoas realmente usam o aplicativo para encontrar/desafiar outras pessoas e organizar atividades esportivas.
+
+Portanto, priorize funcionalidade em vez de adicionar dezenas de recursos.
+
+---
+
+20. ESTRUTURA DO MVP
+
+As principais telas devem ser:
+
+1. Splash / abertura
+2. Escolha do tipo de usuário
+3. Cadastro
+4. Login
+5. Feed
+6. Pesquisa
+7. Visualização de vídeo
+8. Publicar vídeo
+9. Perfil
+10. Ranking
+11. Desafios
+12. Criar desafio
+13. Detalhes do desafio
+14. Perfil do professor
+15. Meus alunos
+16. Configurações
+
+---
+
+21. ADMINISTRAÇÃO
+
+Criar uma área administrativa básica, separada dos usuários comuns.
+
+O administrador poderá futuramente:
+
+- visualizar usuários
+- visualizar vídeos
+- remover conteúdo inadequado
+- bloquear usuários
+- visualizar denúncias
+- gerenciar esportes
+- acompanhar estatísticas básicas
+
+Não precisa ser extremamente complexa no primeiro MVP.
+
+---
+
+22. SEGURANÇA E MODERAÇÃO
+
+Criar funções básicas para:
+
+- Denunciar vídeo
+- Denunciar usuário
+- Bloquear usuário
+- Remover conteúdo denunciado pelo administrador
+- Impedir spam básico
+- Proteger dados dos usuários
+
+Criar também termos de uso e política de privacidade como estrutura inicial, deixando claro que deverão ser revisados juridicamente antes de um lançamento público.
+
+---
+
+23. PRINCIPAL DIFERENCIAL
+
+O SPORT+ NÃO deve ser apresentado simplesmente como:
+
+"Uma rede social para postar vídeos."
+
+A proposta é:
+
+"Uma rede social onde o esporte conecta as pessoas."
+
+A pessoa publica seus vídeos, mostra suas habilidades, recebe avaliações, sobe no ranking, encontra outros praticantes e pode transformar uma interação online em uma atividade esportiva real.
+
+Exemplo de fluxo:
+
+Usuário publica vídeo de vôlei
+↓
+Outro usuário vê o vídeo
+↓
+Dá estrelas
+↓
+O primeiro usuário acumula estrelas
+↓
+Sobe no ranking
+↓
+Os usuários descobrem outros atletas
+↓
+Um usuário chama outro para um X1/amistoso
+↓
+Eles combinam local e horário
+↓
+Podem posteriormente participar de um campeonato.
+
+Esse é o conceito central do aplicativo.
+
+---
+
+24. IMPORTANTE SOBRE O DESENVOLVIMENTO
+
+Não crie tudo de uma vez se isso aumentar a chance de erros.
+
+Primeiro construa uma versão funcional do MVP com:
+
+- Cadastro/login
+- Perfil
+- Feed
+- Publicação de vídeo
+- Estrelas
+- Ranking
+- Pesquisa
+- Desafios
+- Professor/aluno
+
+Depois teste os fluxos.
+
+Priorize uma arquitetura organizada e fácil de expandir.
+
+Quero conseguir posteriormente adicionar novos recursos sem precisar reconstruir o aplicativo inteiro.
+
+Antes de adicionar recursos que não foram solicitados, pergunte ou mantenha-os fora do MVP.
+
+Comece construindo a primeira versão funcional do MVP com esse conceito.
