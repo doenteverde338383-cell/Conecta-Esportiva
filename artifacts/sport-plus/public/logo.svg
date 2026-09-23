@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 48" role="img" aria-labelledby="title desc">
+  <title id="title">SPORT+</title>
+  <desc id="desc">SPORT+ neon green wordmark</desc>
+  <rect width="160" height="48" rx="12" fill="#b8ff3d"/>
+  <path d="M15 12h8l-2 9h8l2-9h8l-6 24h-8l2-9h-8l-2 9h-8l6-24Z" fill="#101711"/>
+  <path d="M53 12h12c7 0 10 3 9 8l-1 3c-1 5-5 8-12 8h-4l-1 5h-8l5-24Zm8 6-1 7h3c2 0 3-1 4-3l.3-1c.4-2-.5-3-3-3h-3.3Z" fill="#101711"/>
+  <path d="M82 12h8l-5 24h-8l5-24Zm19 0h8l-1 6h7l-1 6h-7l-1 6h8l-1 6H97l4-24Z" fill="#101711"/>
+  <path d="M126 19h5v5h6v5h-6v6h-5v-6h-6v-5h6v-5Z" fill="#101711"/>
+</svg>
