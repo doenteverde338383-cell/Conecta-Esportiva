@@ -14,6 +14,19 @@ import {
 } from 'lucide-react';
 import { Link, Route, Switch, useLocation, useParams, Router as WouterRouter } from 'wouter';
 import NotFound from '@/pages/not-found';
+import {
+  PersistentChallengeDetail,
+  PersistentChallengeNew,
+  PersistentChallenges,
+  PersistentDiscover,
+  PersistentFeed,
+  PersistentProfile,
+  PersistentPublish,
+  PersistentRankings,
+  PersistentSettings,
+  PersistentShell,
+  PersistentVideoDetail,
+} from './persistent';
 
 const queryClient = new QueryClient();
 const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
@@ -289,10 +302,7 @@ function AdminPage({ notify }: { notify: (message: string) => void }) { const [r
 
 function AuthLoading() { return <div className="sp-auth-page"><div className="sp-auth-loading"><span className="sp-video-spinner" /><span>Preparando o SPORT+…</span></div></div>; }
 function SignedInShell({ children, onCompose }: { children: ReactNode; onCompose: () => void }) {
-  const { isLoaded, isSignedIn } = useUser();
-  if (!isLoaded) return <AuthLoading />;
-  if (!isSignedIn) return <Welcome />;
-  return <Layout onCompose={onCompose}>{children}</Layout>;
+  return <PersistentShell onCompose={onCompose}>{children}</PersistentShell>;
 }
 function ClerkSignInPage() { return <div className="sp-clerk-page"><SignIn routing="path" path={`${basePath}/sign-in`} signUpUrl={`${basePath}/sign-up`} /></div>; }
 function ClerkSignUpPage() { return <div className="sp-clerk-page"><SignUp routing="path" path={`${basePath}/sign-up`} signInUrl={`${basePath}/sign-in`} /></div>; }
@@ -303,20 +313,20 @@ function Router({ onCompose, notify }: { onCompose: () => void; notify: (message
     <Route path="/welcome" component={Welcome} />
     <Route path="/sign-in/*?" component={ClerkSignInPage} />
     <Route path="/sign-up/*?" component={ClerkSignUpPage} />
-    <Route path="/video/:id">{shell(<VideoDetail notify={notify} />)}</Route>
-    <Route path="/publish">{shell(<Publish notify={notify} />)}</Route>
-    <Route path="/challenges/new">{shell(<ChallengeNew notify={notify} />)}</Route>
-    <Route path="/challenges/:id">{shell(<ChallengeDetail notify={notify} />)}</Route>
-    <Route path="/challenges">{shell(<Challenges notify={notify} />)}</Route>
+    <Route path="/video/:id">{shell(<PersistentVideoDetail notify={notify} />)}</Route>
+    <Route path="/publish">{shell(<PersistentPublish notify={notify} />)}</Route>
+    <Route path="/challenges/new">{shell(<PersistentChallengeNew notify={notify} />)}</Route>
+    <Route path="/challenges/:id">{shell(<PersistentChallengeDetail notify={notify} />)}</Route>
+    <Route path="/challenges">{shell(<PersistentChallenges />)}</Route>
     <Route path="/teacher/students">{shell(<TeacherStudents notify={notify} />)}</Route>
-    <Route path="/settings">{shell(<SettingsPage notify={notify} />)}</Route>
+    <Route path="/settings">{shell(<PersistentSettings notify={notify} />)}</Route>
     <Route path="/admin">{shell(<AdminPage notify={notify} />)}</Route>
-    <Route path="/profile/:handle">{shell(<Profile notify={notify} />)}</Route>
-    <Route path="/profile">{shell(<Profile notify={notify} />)}</Route>
-    <Route path="/discover">{shell(<Discover notify={notify} />)}</Route>
-    <Route path="/rankings">{shell(<Rankings />)}</Route>
-    <Route path="/feed">{shell(<VerticalFeed onCompose={onCompose} notify={notify} />)}</Route>
-    <Route path="/">{shell(<VerticalFeed onCompose={onCompose} notify={notify} />)}</Route>
+    <Route path="/profile/:handle">{shell(<PersistentProfile notify={notify} />)}</Route>
+    <Route path="/profile">{shell(<PersistentProfile notify={notify} />)}</Route>
+    <Route path="/discover">{shell(<PersistentDiscover notify={notify} />)}</Route>
+    <Route path="/rankings">{shell(<PersistentRankings />)}</Route>
+    <Route path="/feed">{shell(<PersistentFeed onCompose={onCompose} notify={notify} />)}</Route>
+    <Route path="/">{shell(<PersistentFeed onCompose={onCompose} notify={notify} />)}</Route>
     <Route component={NotFound} />
   </Switch></RoutedErrorBoundary>;
 }

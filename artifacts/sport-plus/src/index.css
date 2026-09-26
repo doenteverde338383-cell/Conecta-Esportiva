@@ -289,7 +289,10 @@
 .sp-muted-text { color: hsl(var(--muted-foreground)); font-size: .66rem; }
 .sp-profile-video-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
 .sp-profile-video { color: inherit; text-decoration: none; min-width: 0; }
+.sp-profile-video video { width: 100%; aspect-ratio: 1.2; object-fit: cover; border-radius: 10px; background: hsl(var(--sidebar)); display: block; margin-bottom: 8px; }
 .sp-profile-video strong { display: block; font-size: .65rem; line-height: 1.35; }
+.sp-detail-video { width: 100%; min-height: 510px; max-height: 72vh; object-fit: contain; display: block; border-radius: 18px; background: #050706; }
+.sp-video-comments { position: absolute; left: 24px; right: 24px; bottom: 24px; z-index: 5; max-height: 34%; overflow: auto; background: hsl(var(--sidebar) / .86); backdrop-filter: blur(10px); border-radius: 12px; padding: 10px; }
 .sp-profile-rank { display: flex; align-items: center; gap: 8px; color: hsl(var(--primary)); margin: 14px 0 12px; }
 .sp-profile-rank strong { font: 1.6rem 'Space Grotesk'; }
 .sp-profile-rank span { color: hsl(var(--muted-foreground)); font-size: .64rem; }

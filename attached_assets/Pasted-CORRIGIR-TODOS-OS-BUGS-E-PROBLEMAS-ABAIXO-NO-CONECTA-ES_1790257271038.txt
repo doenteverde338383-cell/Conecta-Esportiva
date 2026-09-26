@@ -1,0 +1,140 @@
+CORRIGIR TODOS OS BUGS E PROBLEMAS ABAIXO NO CONECTA ESPORTIVA. NÃO ALTERAR O DESIGN E A INTERFACE ATUAL ALÉM DO QUE FOR NECESSÁRIO PARA CORRIGIR OS PROBLEMAS.
+
+1. VÍDEOS PUBLICADOS DESAPARECEM
+
+- Quando o usuário publica um vídeo, ele atualmente pode desaparecer depois da publicação.
+- Todo vídeo publicado deve ser salvo permanentemente no banco de dados/armazenamento.
+- O vídeo deve ficar associado ao usuário que publicou.
+- O vídeo deve continuar existindo mesmo depois de atualizar a página, fechar o site/app ou abrir novamente.
+- Nunca apagar ou perder o vídeo automaticamente.
+
+2. VÍDEOS NÃO APARECEM NO PERFIL
+
+- Todo vídeo publicado deve aparecer automaticamente na aba/seção de vídeos do perfil do usuário.
+- Os vídeos precisam continuar aparecendo depois de atualizar ou reabrir o aplicativo/site.
+
+3. VÍDEOS NÃO APARECEM NO FEED/ABA DE VÍDEOS
+
+- Todo vídeo publicado deve aparecer também na aba de vídeos da tela inicial/feed.
+- O feed deve buscar os vídeos salvos no banco de dados.
+- Os vídeos não podem simplesmente sumir depois da publicação.
+- O feed deve continuar funcionando depois de atualizar ou reabrir o app/site.
+
+4. FEED DE VÍDEOS
+
+- Remover o limite atual de “01/04” ou qualquer limite fixo semelhante.
+- O sistema deve permitir uma quantidade variável de vídeos.
+- Deve suportar pelo menos 1.000+ vídeos cadastrados/publicados.
+- Implementar carregamento progressivo/infinito para não tentar carregar todos os vídeos de uma vez.
+- O feed deve funcionar no estilo TikTok/Kwai, com vídeos em sequência.
+- Manter o visual/interface atual e não mudar o design sem necessidade.
+
+5. FOTOS
+
+- Fotos enviadas pelos usuários também precisam ser armazenadas permanentemente.
+- As fotos devem ficar associadas ao usuário correto.
+- Não perder as fotos quando o aplicativo/site for atualizado, fechado ou reaberto.
+
+6. CADASTRO DE USUÁRIO
+
+- O cadastro deve permitir informar corretamente:
+  • Nome
+  • Idade
+  • Esporte/modalidade
+  • Tipo de usuário
+- Os dados cadastrados precisam ser realmente salvos no banco de dados.
+- Não utilizar informações aleatórias, fictícias ou valores gerados automaticamente no perfil do usuário.
+- O perfil exibido deve corresponder aos dados realmente cadastrados.
+
+7. PERFIL ERRADO / DADOS INCORRETOS
+
+- Corrigir qualquer situação em que o aplicativo mostre o perfil de outra pessoa ou dados que não pertencem ao usuário.
+- Cada usuário deve visualizar e editar somente os dados e conteúdos associados à própria conta.
+- Vídeos e fotos precisam ficar vinculados ao usuário correto.
+
+8. CURTIDAS
+
+- Corrigir o sistema de likes/curtidas.
+- A curtida precisa ser realmente registrada no banco de dados.
+- A quantidade de curtidas deve permanecer correta depois de atualizar ou reabrir o app/site.
+- Evitar contagens falsas ou que voltem ao valor anterior.
+
+9. ESTRELAS
+
+- Corrigir o sistema de estrelas.
+- As estrelas dadas pelos usuários precisam ser salvas permanentemente.
+- A quantidade de estrelas do perfil deve permanecer correta depois de atualizar/reabrir.
+- O sistema de estrelas deve funcionar corretamente para o ranking.
+
+10. COMENTÁRIOS
+
+- Corrigir os comentários.
+- Comentários publicados devem ser realmente salvos.
+- Eles devem continuar aparecendo depois de atualizar ou reabrir o app/site.
+- Os comentários devem ficar associados ao vídeo e ao usuário correto.
+
+11. COMPARTILHAMENTO
+
+- Corrigir o botão/função de compartilhamento.
+- O botão não pode ficar sem ação.
+- Deve executar corretamente a função de compartilhar o conteúdo.
+
+12. ÁUDIO/SOM DOS VÍDEOS
+
+- Corrigir o sistema de áudio dos vídeos.
+- O som/áudio dos vídeos publicados deve ser preservado.
+- O usuário deve conseguir assistir aos vídeos com o áudio quando o vídeo possuir áudio.
+- Não remover ou perder o áudio durante o upload/publicação.
+
+13. DESAFIOS
+
+- Corrigir o sistema de desafios.
+- O desafio precisa realmente ser criado e salvo no banco de dados.
+- Ao criar um desafio, permitir informar:
+  • Esporte/modalidade
+  • Tipo de desafio
+  • Data
+  • Horário
+  • Local
+  • Participantes
+- Os dados do desafio devem permanecer salvos.
+- O desafio deve aparecer corretamente para os usuários envolvidos.
+
+14. BOTÕES SEM AÇÃO
+
+- Verificar todos os botões do aplicativo/site.
+- Nenhum botão deve aparecer na interface se não possuir uma função funcionando.
+- Corrigir botões que atualmente não fazem nada.
+- Testar todos os botões depois das correções.
+
+15. BANCO DE DADOS E PERSISTÊNCIA
+
+- Todas as informações importantes precisam ser persistentes.
+- Não utilizar apenas dados temporários em memória/local que desapareçam ao atualizar a página.
+- Usuários, perfis, vídeos, fotos, likes, comentários, estrelas e desafios devem ser salvos corretamente.
+- Ao fechar e abrir novamente o aplicativo/site, os dados devem continuar disponíveis.
+
+16. TESTE COMPLETO DO FLUXO
+    Depois de implementar as correções, testar o fluxo completo:
+
+- Criar uma conta.
+- Fazer login.
+- Preencher o perfil.
+- Publicar um vídeo.
+- Verificar se o vídeo aparece no perfil.
+- Verificar se aparece no feed/aba de vídeos.
+- Atualizar a página.
+- Fechar e abrir novamente.
+- Confirmar que o vídeo continua lá.
+- Testar áudio.
+- Testar curtida.
+- Testar estrelas.
+- Testar comentários.
+- Testar compartilhamento.
+- Criar um desafio.
+- Confirmar que o desafio foi salvo.
+- Testar fotos.
+- Verificar se os dados continuam corretos depois de sair e entrar novamente.
+
+IMPORTANTE:
+Corrigir os problemas sem substituir o sistema por dados falsos ou temporários. O objetivo é que o aplicativo/site funcione de verdade com banco de dados e armazenamento persistente.
