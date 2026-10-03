@@ -25,8 +25,11 @@ import {
   PersistentRankings,
   PersistentSettings,
   PersistentShell,
+  PersistentTeacherStudents,
   PersistentVideoDetail,
 } from './persistent';
+import { PersistentFeedScreen } from './PersistentFeedScreen';
+import { PersistentPublishScreen } from './PersistentPublishScreen';
 
 const queryClient = new QueryClient();
 const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
@@ -314,19 +317,19 @@ function Router({ onCompose, notify }: { onCompose: () => void; notify: (message
     <Route path="/sign-in/*?" component={ClerkSignInPage} />
     <Route path="/sign-up/*?" component={ClerkSignUpPage} />
     <Route path="/video/:id">{shell(<PersistentVideoDetail notify={notify} />)}</Route>
-    <Route path="/publish">{shell(<PersistentPublish notify={notify} />)}</Route>
+    <Route path="/publish">{shell(<PersistentPublishScreen notify={notify} />)}</Route>
     <Route path="/challenges/new">{shell(<PersistentChallengeNew notify={notify} />)}</Route>
     <Route path="/challenges/:id">{shell(<PersistentChallengeDetail notify={notify} />)}</Route>
     <Route path="/challenges">{shell(<PersistentChallenges />)}</Route>
-    <Route path="/teacher/students">{shell(<TeacherStudents notify={notify} />)}</Route>
+    <Route path="/teacher/students">{shell(<PersistentTeacherStudents notify={notify} />)}</Route>
     <Route path="/settings">{shell(<PersistentSettings notify={notify} />)}</Route>
     <Route path="/admin">{shell(<AdminPage notify={notify} />)}</Route>
     <Route path="/profile/:handle">{shell(<PersistentProfile notify={notify} />)}</Route>
     <Route path="/profile">{shell(<PersistentProfile notify={notify} />)}</Route>
     <Route path="/discover">{shell(<PersistentDiscover notify={notify} />)}</Route>
     <Route path="/rankings">{shell(<PersistentRankings />)}</Route>
-    <Route path="/feed">{shell(<PersistentFeed onCompose={onCompose} notify={notify} />)}</Route>
-    <Route path="/">{shell(<PersistentFeed onCompose={onCompose} notify={notify} />)}</Route>
+    <Route path="/feed">{shell(<PersistentFeedScreen onCompose={onCompose} notify={notify} />)}</Route>
+    <Route path="/">{shell(<PersistentFeedScreen onCompose={onCompose} notify={notify} />)}</Route>
     <Route component={NotFound} />
   </Switch></RoutedErrorBoundary>;
 }

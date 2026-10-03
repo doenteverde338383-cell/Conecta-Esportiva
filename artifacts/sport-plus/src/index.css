@@ -290,9 +290,29 @@
 .sp-profile-video-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
 .sp-profile-video { color: inherit; text-decoration: none; min-width: 0; }
 .sp-profile-video video { width: 100%; aspect-ratio: 1.2; object-fit: cover; border-radius: 10px; background: hsl(var(--sidebar)); display: block; margin-bottom: 8px; }
+.sp-profile-video img { width: 100%; aspect-ratio: 1.2; object-fit: cover; border-radius: 10px; background: hsl(var(--sidebar)); display: block; margin-bottom: 8px; }
 .sp-profile-video strong { display: block; font-size: .65rem; line-height: 1.35; }
 .sp-detail-video { width: 100%; min-height: 510px; max-height: 72vh; object-fit: contain; display: block; border-radius: 18px; background: #050706; }
-.sp-video-comments { position: absolute; left: 24px; right: 24px; bottom: 24px; z-index: 5; max-height: 34%; overflow: auto; background: hsl(var(--sidebar) / .86); backdrop-filter: blur(10px); border-radius: 12px; padding: 10px; }
+.sp-detail-photo-carousel { display: flex; width: 100%; height: min(72vh, 720px); min-height: 360px; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; border-radius: 18px; background: #050706; scrollbar-width: thin; }
+.sp-detail-photo-carousel img { flex: 0 0 100%; width: 100%; height: 100%; object-fit: contain; scroll-snap-align: start; }
+.sp-video-comments { position: absolute; left: auto; right: 86px; bottom: 78px; z-index: 5; width: min(370px, calc(100% - 120px)); max-height: 42%; overflow: auto; background: hsl(var(--sidebar) / .94); border: 1px solid hsl(var(--sidebar-border)); box-shadow: 0 12px 36px rgba(0,0,0,.3); backdrop-filter: blur(10px); border-radius: 12px; padding: 12px; }
+.sp-comments-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; color: #f4f8f1; font-size: .73rem; }
+.sp-image-carousel { position: absolute; z-index: 1; inset: 0; display: flex; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain; }
+.sp-image-carousel::-webkit-scrollbar { display: none; }
+.sp-image-carousel img { display: block; flex: 0 0 100%; width: 100%; height: 100%; object-fit: cover; scroll-snap-align: start; }
+.sp-video-slide.photo-slide { background: #101711; }
+.sp-video-slide.photo-slide .sp-video-shade { background: linear-gradient(180deg, rgba(3, 7, 4, .28), transparent 30%, transparent 48%, rgba(3, 7, 4, .8) 100%); }
+.sp-video-result > img { width: 100%; aspect-ratio: 1.2; object-fit: cover; border-radius: 10px; background: hsl(var(--sidebar)); }
+.sp-publish-carousel { position: relative; width: min(100%, 420px); height: 245px; overflow: hidden; border-radius: 11px; background: hsl(var(--sidebar)); }
+.sp-publish-carousel > img { display: none; width: 100%; height: 100%; object-fit: contain; }
+.sp-publish-carousel > img.active { display: block; }
+.sp-publish-carousel-controls { position: absolute; inset: auto 9px 9px; display: flex; justify-content: space-between; align-items: center; color: white; pointer-events: none; }
+.sp-publish-carousel-controls > * { pointer-events: auto; }
+.sp-profile-help { position: relative; margin: -7px 0 12px; color: hsl(var(--sidebar-foreground) / .7); }
+.sp-profile-help summary { display: flex; align-items: center; gap: 6px; width: fit-content; cursor: pointer; list-style: none; font-size: .62rem; font-weight: 800; }
+.sp-profile-help summary::-webkit-details-marker { display: none; }
+.sp-profile-help p { margin: 8px 4px 0; color: hsl(var(--sidebar-foreground) / .66); font-size: .58rem; line-height: 1.5; }
+.sp-profile-help p strong { color: hsl(var(--primary)); }
 .sp-profile-rank { display: flex; align-items: center; gap: 8px; color: hsl(var(--primary)); margin: 14px 0 12px; }
 .sp-profile-rank strong { font: 1.6rem 'Space Grotesk'; }
 .sp-profile-rank span { color: hsl(var(--muted-foreground)); font-size: .64rem; }
@@ -466,6 +486,7 @@
   .sp-video-info { left: 15px; bottom: 24px; width: calc(100% - 88px); }
   .sp-video-info p { font-size: .89rem; }
   .sp-video-actions { right: 14px; bottom: 27px; gap: 12px; }
+  .sp-video-comments { left: 12px; right: 65px; bottom: 74px; width: auto; max-height: 43%; padding: 10px; }
   .sp-video-action svg { width: 20px; height: 20px; }
   .sp-video-action span { font-size: .5rem; }
   .sp-video-feed-hint { bottom: 78px; }

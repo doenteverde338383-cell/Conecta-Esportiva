@@ -35,6 +35,15 @@ export const sportVideos = pgTable("sport_videos", {
   createdAt: timestamp("created_at", { withTimezone: true }).defaultNow().notNull(),
 });
 
+export const sportVideoMedia = pgTable("sport_video_media", {
+  id: text("id").primaryKey(),
+  videoId: text("video_id").notNull().references(() => sportVideos.id, { onDelete: "cascade" }),
+  objectPath: text("object_path").notNull(),
+  contentType: text("content_type").notNull(),
+  originalName: text("original_name").notNull(),
+  position: integer("position").notNull().default(0),
+});
+
 export const sportVideoLikes = pgTable("sport_video_likes", {
   videoId: text("video_id").notNull().references(() => sportVideos.id, { onDelete: "cascade" }),
   userId: text("user_id").notNull().references(() => sportProfiles.userId, { onDelete: "cascade" }),
@@ -80,3 +89,21 @@ export const sportChallengeParticipants = pgTable("sport_challenge_participants"
 }, (table) => ({
   pk: primaryKey({ columns: [table.challengeId, table.userId] }),
 }));
+
+export const sportFollows = pgTable("sport_follows", {
+  followerId: text("follower_id").notNull().references(() => sportProfiles.userId, { onDelete: "cascade" }),
+  followedId: text("followed_id").notNull().references(() => sportProfiles.userId, { onDelete: "cascade" }),
+  createdAt: timestamp("created_at", { withTimezone: true }).defaultNow().notNull(),
+}, (table) => ({
+  pk: primaryKey({ columns: [table.followerId, table.followedId] }),
+}));
+
+export const sportInvitations = pgTable("sport_invitations", {
+  id: text("id").primaryKey(),
+  teacherId: text("teacher_id").notNull().references(() => sportProfiles.userId, { onDelete: "cascade" }),
+  athleteId: text("athlete_id").notNull().references(() => sportProfiles.userId, { onDelete: "cascade" }),
+  kind: text("kind").notNull(),
+  message: text("message").notNull(),
+  status: text("status").notNull().default("pending"),
+  createdAt: timestamp("created_at", { withTimezone: true }).defaultNow().notNull(),
+});

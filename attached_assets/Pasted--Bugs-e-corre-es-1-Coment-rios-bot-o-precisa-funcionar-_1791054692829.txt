@@ -1,0 +1,73 @@
+🐛 Bugs e correções
+
+1. Comentários — botão precisa funcionar.
+2. Compartilhar — botão precisa funcionar.
+3. Som — botão precisa funcionar.
+4. Perfil errado — ao clicar no perfil de alguém, às vezes abre outro perfil.
+5. Desafio — botão não abre corretamente a criação de desafio.
+6. Login/cadastro — nome, modalidade esportiva e idade precisam ficar salvos corretamente no banco de dados.
+7. Publicação de vídeo — depois de publicar, o vídeo não pode desaparecer.
+8. Vídeo publicado — precisa aparecer:
+    * no feed inicial;
+    * na aba de vídeos do perfil;
+    * depois de atualizar/reabrir o aplicativo.
+9. Curtida/estrela/comentário — remover aquela “mancha”/elemento visual aparecendo no canto inferior direito.
+10. Feed travado em 01/04 — não pode ficar limitado a apenas alguns vídeos.
+11. Feed infinito — deve continuar carregando os vídeos disponíveis, seja 10, 100, 1.000 etc.
+12. Atualizar feed — ter uma forma de recarregar o feed para buscar publicações novas.
+13. Hashtags — substituir a “etiqueta” que estava bugada por hashtags funcionais, como #volei e #futebol.
+14. Armazenamento permanente — vídeos e fotos publicados precisam continuar salvos mesmo depois de fechar/reabrir o app.
+
+📱 Funcionalidades do beta/MVP
+
+Contas
+
+* 🏐 Atleta
+    * publicar vídeos e fotos;
+    * curtir;
+    * comentar;
+    * dar estrelas;
+    * seguir;
+    * criar desafios;
+    * criar amistosos;
+    * criar campeonatos.
+* 🧑‍🏫 Professor de Educação Física
+    * mesmas funções do atleta;
+    * função exclusiva “Convidar atleta” no perfil de um atleta;
+    * possibilidade de convidar o atleta para escolinha/campeonato;
+    * identificação visual de que é professor;
+    * ícone de ajuda/lupa/interrogação explicando os tipos de perfil.
+* 👤 Espectador/Fã de esportes
+    * assistir aos conteúdos;
+    * visitar perfis;
+    * seguir;
+    * curtir;
+    * comentar;
+    * dar estrelas;
+    * não pode publicar;
+    * não pode criar desafio, amistoso ou campeonato.
+
+🎥 Publicações
+
+* Vídeos com reprodução automática no estilo TikTok/Reels/Shorts.
+* Fotos normais.
+* Carrossel de até 10 fotos em uma publicação.
+* Deslizar horizontalmente entre as fotos.
+* Legenda.
+* Hashtags.
+* Sem música por enquanto.
+* Upload de vários vídeos de uma vez, se for estável para o beta.
+* No upload múltiplo:
+    * uma legenda/título compartilhado;
+    * hashtags compartilhadas;
+    * sem precisar editar cada vídeo individualmente.
+
+🏆 Parte esportiva/social
+
+* Criar desafio.
+* Criar 1x1.
+* Criar amistoso.
+* Criar campeonato.
+* Encontrar/conectar atletas.
+* Possibilidade de professores encontrarem atletas e convidá-los.
+* Sistema de estrelas + ranking para destacar perfis.
